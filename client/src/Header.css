@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  height: 56px;
+  background-color: #bc3c6c;
+  margin-bottom: 24px;
+  position: relative;
+  box-shadow: 0px 0px 4px #000000b6; }
+
+.header .title {
+  color: white;
+  position: absolute;
+  top: 16px;
+  left: 72px;
+  font-size: 20px;
+  text-shadow: 1px 1px 0px black; }
+
+.header .logo {
+  left: 8px;
+  top: 5px;
+  position: absolute;
+  /* animation: logo-spin infinite 30s linear; */
+  height: 50px;
+  border-radius: 8px;
+  margin-left: 200px; }
+
+/* @keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */

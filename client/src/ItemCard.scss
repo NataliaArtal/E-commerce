@@ -1,0 +1,54 @@
+body {
+  background-color:  rgba(184, 179, 179, 0.6);
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 5%;
+
+}
+
+.card {
+    margin: 3px auto;
+    width: 100%;
+    height: 180px;
+    // border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 18px;
+    box-shadow: 1px 1px 5px #0000002c;
+    text-align: left;
+    background-color: rgba(255, 253, 253, 0.933);
+  }
+  
+  .foto {
+    border-radius: 4px;
+    width: 180px;
+    height: 160px;
+    background-color: rgba(110, 134, 199, 0.3);
+    position: relative;
+    margin: 10px;
+  }
+  
+  .precio  {
+    position: absolute;
+    left: 20%;
+    margin: 40px;
+    font-weight: 200;
+    font-size: 35px;
+  }
+  
+  .titulo {
+    left: 250px;
+    bottom: 50px;
+    position: absolute;
+    font-size: 20px;
+  }
+
+  .ubicacion {
+     margin-left: 900px;
+     position: absolute;
+     top: 100px;
+  }

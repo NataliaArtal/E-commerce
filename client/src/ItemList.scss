@@ -1,0 +1,25 @@
+.search {
+    padding: 10px;
+    position: relative;
+  }
+  
+  .search input {
+    width: 70%;
+    height: 25px;
+    left: 15%;
+    right: 15%;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 1px 1px 5px #0000002c;
+    outline: none;
+    position: absolute;
+    bottom: 56px;
+  }
+
+  .boton {
+    position: absolute;
+    bottom: 62px;
+    right: 180px;
+    z-index: 1;
+  }
