@@ -1,7 +1,11 @@
 import React from 'react';
 import ItemCard from './ItemCard';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faTruck } from '@fortawesome/free-solid-svg-icons';
+
+
 
 class ItemList extends React.Component {
     constructor(props) {
@@ -10,6 +14,11 @@ class ItemList extends React.Component {
             searchTerm: '',
             searchResult: null
          };
+    }
+
+    componentWillMount() {
+        library.add(faSearch);
+        library.add(faTruck);
     }
     
     handleOnChange = event => {
@@ -34,7 +43,8 @@ class ItemList extends React.Component {
                     <form>
                         <input className="input" placeholder="Nunca dejes de buscar" onChange={this.handleOnChange}/>
                     </form>
-                    <button onClick={this.handleSearchClick} className="boton">Buscar</button>
+                    <div className="boton"><FontAwesomeIcon onClick={this.handleSearchClick}  icon="search"/></div>
+                    
                 </div>
                 <div>
                     {
