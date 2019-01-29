@@ -1,8 +1,10 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
-import componentWithLayout from './Layout';
 import './ItemList.css';
 import ItemList from './ItemList';
+import DetailsProduct from './DetailsProduct';
+import Search from './Search';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,11 +15,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-      <ItemList />
+        {/* <Search/> */}
+        <Route path="/" component={Search} />
+        <Route path="/items" exact component={ItemList}/>
+        <Route path="/items/:id" component={DetailsProduct}/>
       </div>
       );
     }
     
   }
   
-  export default componentWithLayout(App);
+  
+  export default App;
+
+ 
