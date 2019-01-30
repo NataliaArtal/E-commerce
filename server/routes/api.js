@@ -99,7 +99,7 @@ const getItem = async itemId => {
     processedItem.item.price.amount = Math.trunc(itemResponse.price) 
     processedItem.item.price.currency = itemResponse.currency
     processedItem.item.price.decimals = parseDecimals(itemResponse.price)
-    processedItem.item.picture = itemResponse.thumbnail
+    processedItem.item.picture = itemResponse.pictures[0].url
     processedItem.item.condition = itemResponse.condition
     processedItem.item.free_shipping = itemResponse.shipping.free_shipping
     processedItem.item.sold_quantity = itemResponse.sold_quantity

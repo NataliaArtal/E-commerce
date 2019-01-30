@@ -30,7 +30,6 @@ class DetailsProduct extends React.Component {
     }
 
     render() {
-        console.log(this.state.data)
         if (!this.state.data) {
             return (
                 <div></div>
@@ -45,20 +44,24 @@ class DetailsProduct extends React.Component {
                            }
                         </ul>
                     </div>
-                    <div className="container">
+                    <div className="container1">
+                        <div className="contanier-sup">
                            <div className="picture">
                                 <img className="pic" alt="foto" src={this.state.data.item.picture}></img>
                            </div>
                            <div className="price-details">
-                                <span className="condition-sold">{this.state.data.item.condition}-{this.state.data.item.sold_quantity}</span>
-                                <span className="title">{this.state.data.item.title}</span>
+                                <span className="condition-sold">{this.state.data.item.condition === "new" ? "Nuevo" : "Usado"} - {this.state.data.item.sold_quantity} vendidos</span>
+                                <span className="title1">{this.state.data.item.title}</span>
                                 <span className="price">${this.state.data.item.price.amount}{this.state.data.item.price.decimals > 0 && (<sup>{this.state.data.item.price.decimals}</sup>)}</span>
                                 <a href='https://www.mercadolibre.com.ar/' className="boton1" >Comprar</a>
                            </div>
+                        </div>
+                        <div className="contanier-inf">
                            <div className="description">
-                                <h3>Descripción del producto</h3>
-                                <span className="description-parrafo">{this.state.data.item.description}</span>
+                                <h2>Descripción del producto</h2>
+                                <p className="description-parrafo">{this.state.data.item.description}</p>
                            </div>
+                        </div>
                     </div>
                 </div>
             )

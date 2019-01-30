@@ -18,22 +18,29 @@ class Search extends React.Component {
 
     componentWillMount() {
         library.add(faSearch);
+        this.handleLogoOnClick()
     }
     
     handleOnChange = event => {
         this.setState({ searchTerm: event.target.value });
     };
+
+    handleLogoOnClick = () => {
+        if (this.state.searchTerm !== "") {
+            this.setState({searchTerm:""})
+        }
+    }
     
     render() {
         return (
             <div>
                 <div className="header"/>
-                <Link to="/"><img src={logo} className="logo" alt="logo" /></Link>
+                <Link to="/" onClick={this.handleLogoOnClick}><img src={logo} className="logo" alt="logo" /></Link>
                 <div className="search">
                     <form>
-                        <input className="input" placeholder="Nunca dejes de buscar" onChange={this.handleOnChange}/>
+                        <input className="input" placeholder="Nunca dejes de buscar" value={this.state.searchTerm} onChange={this.handleOnChange}/>
                     </form>
-                    <Link to={`/items?q=${this.state.searchTerm}`}>
+                    <Link  to={`/items?q=${this.state.searchTerm}`}>
                         <div className="boton"><FontAwesomeIcon icon="search"/></div>
                     </Link>
                 </div>
